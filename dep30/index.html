@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubwayPIX - Depósito</title>
+    <style>
+
+        #pix-code {
+    /* Mantendo a fonte original */
+    font-family: monospace;
+    font-size: 1em;
+    word-wrap: break-word;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    max-height: 2.6em; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+#pix-code::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5em; /* Altura da sobreposição gradiente para ocultar o restante do conteúdo */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f5f5f5);
+}
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: #000;
+        }
+
+        header {
+            display: none;
+        }
+
+        nav {
+            background-color: #c0392b;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #d35400;
+            display: none;
+        }
+
+        .menu-icon {
+            display: block;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 80px 20px 20px 20px;
+        }
+
+        /* Quadrante principal */
+        .question-box {
+            background-color: #fff;
+            border: 5px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #bonus-text {
+            color: #000;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        #bonus-text .bonus-text {
+            font-weight: bold;
+        }
+
+        #qr-code-container {
+            margin-top: 10px;
+        }
+
+        #qr-code-image {
+            width: 100%;
+            height: auto;
+            border: 5px solid #000;
+            border-radius: 10px;
+        }
+
+        #pix-code-container {
+            margin-top: 20px;
+        }
+
+        #pix-code-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #pix-code {
+            /* Mantendo a fonte original */
+            font-family: monospace;
+            font-size: 1em;
+            word-wrap: break-word;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #pix-amount {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #copy-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #copy-button:hover {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        #payment-instructions {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    <!-- Cabeçalho removido -->
+
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <a href="#pagina-inicial">Página Inicial</a>
+        <a href="#pagina-jogar">Jogar</a>
+        <a href="#pagina-login">Login</a>
+        <a href="#pagina-pagamento">Pagamento</a>
+    </nav>
+
+    <section id="pagina-pagamento" class="question-box">
+        <div id="bonus-text"><span class="bonus-text">BÔNUS DE R$ 100,00 VÁLIDO POR:</span> <span id="countdown">15:00</span></div>
+
+        <!-- Conteúdo do Pagamento -->
+        <div id="qr-code-container">
+            <img id="qr-code-image" src="https://i.ibb.co/74sddYL/photo1706649448.jpg" alt="QR Code">
+        </div>
+
+        <div id="pix-code-container">
+            <div id="pix-code-text">
+                Código PIX Copie e Cole:
+            </div>
+            <div id="pix-code">
+                00020101021126580014br.gov.bcb.pix013663767966-40ce-4933-befb-1b60172f15db520400005303986540530.005802BR5923PEDRO H A S 141246096476009SAO PAULO62200516RecargaSubwayPIX630467D8
+            </div>
+            <div id="pix-amount">
+                Você receberá R$ 130,00
+            </div>
+            <button id="copy-button" onclick="copyPixCode()">Copiar código para pagamento</button>
+        </div>
+
+        <div id="payment-instructions">
+            Pague e será creditado na hora!
+        </div>
+
+        <script>
+            // Função para copiar o código PIX
+            function copyPixCode() {
+                var pixCodeElement = document.getElementById('pix-code');
+                var range = document.createRange();
+                range.selectNode(pixCodeElement);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+
+                // Altera o texto do botão
+                document.getElementById('copy-button').innerHTML = "Código Copiado";
+            }
+
+            // Função para iniciar o contador
+            function startCountdown(duration) {
+                var timer = duration * 60; // Converte para segundos
+                var countdownElement = document.getElementById('countdown');
+
+                var intervalId = setInterval(function () {
+                    var minutes = Math.floor(timer / 60);
+                    var seconds = timer % 60;
+
+                    // Adiciona um zero à esquerda se for menor que 10
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    countdownElement.innerHTML = minutes + ":" + seconds;
+
+                    if (--timer < 0) {
+                        clearInterval(intervalId);
+                        countdownElement.innerHTML = "00:00";
+                    }
+                }, 1000);
+            }
+
+            // Inicia o contador com 15 minutos
+            startCountdown(15);
+        </script>
+    </section>
+
+    <!-- Adicionando funcionalidade ao ícone do menu para mostrar/ocultar a navegação -->
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('nav').style.display = (getComputedStyle(document.querySelector('nav')).display === 'none') ? 'block' : 'none';
+        });
+    </script>
+
+<script language=JavaScript>
+<!--
+var mensagem="";
+function clickIE() {if (document.all) {(mensagem);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(mensagem);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+    <!-- Adicione este código no final do corpo da sua página -->
+<style>
+    /* Estilo para o botão flutuante */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<a href="https://api.whatsapp.com/send?phone=5538999826787&text=Ol%C3%A1,%20pode%20me%20ajudar?" target="_blank" class="whatsapp-button">
+    <img src="https://i.ibb.co/B4vqFsn/124034.png" alt="Contato via WhatsApp" style="border-radius: 50%; width: 100%; height: 100%;">
+</a>
+<Body onselectstart="return false">
+    
+</body>
+</html>

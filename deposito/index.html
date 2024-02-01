@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Surfers - Depósito</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif; /* Alterado para Arial como fonte principal */
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.ibb.co/MDdWXyQ/background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #000;
+        }
+
+        header {
+            display: none;
+        }
+
+        nav {
+            background-color: #c0392b;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #d35400;
+            display: none;
+        }
+
+        .menu-icon {
+            display: block;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 80px 20px 20px 20px;
+        }
+
+        /* Quadrante principal */
+        .first-quadrant {
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #subwaypix-text {
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+            z-index: 1;
+        }
+
+        #subwaypix-text:hover {
+            color: #ffd700;
+        }
+
+        /* Estilos específicos para dispositivos móveis */
+        @media only screen and (max-width: 600px) {
+            nav {
+                top: 0;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            #subwaypix-text {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Estilos para o formulário de depósito */
+        #pagina-deposito {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 100vw;
+            max-width: 600px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 15px;
+            border: 5px solid #000;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        #deposito-header {
+            font-size: 2em;
+            font-weight: normal;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif; /* Aplicando a fonte Arial */
+        }
+
+        #descricao-deposito {
+            font-family: Arial, sans-serif; /* Aplicando a fonte Arial */
+        }
+
+        #valor-selecionado,
+        #botoes-deposito {
+            width: 80%;
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+
+        #valor-selecionado {
+            border: 2px solid #d35400;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .valor-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .valor-button:hover {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        #depositar-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+            width: 80%;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        #depositar-button:hover {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        #termos-de-servico {
+            font-size: 0.8em;
+            color: #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho removido -->
+
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <a href="#pagina-inicial">Página Inicial</a>
+        <a href="#pagina-jogar">Jogar</a>
+        <a href="#pagina-login">Login</a>
+        <a href="#pagina-deposito">Depósito</a>
+    </nav>
+
+    <section id="pagina-deposito">
+        <h1><div id="subwaypix-text"></div></h1>
+
+        <!-- Cabeçalho do Depósito -->
+        <div id="deposito-header">
+            <strong>DEPÓSITO</strong> <!-- Alterado para fonte normal -->
+        </div>
+
+        <!-- Descrição do Depósito -->
+        <div id="descricao-deposito">
+            Deposite via <strong>PIX, prático, rápido e seguro!</strong> Seu saldo cai <strong>NA HORA</strong> e você já começa a surfar e <strong>LUCRAR!</strong>
+        </div>
+
+        <!-- Removendo campos do Formulário -->
+        <!--
+        <input type="text" id="nome-input" placeholder="Nome" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" title="Apenas letras são permitidas" required>
+        <input type="text" id="cpf-input" placeholder="CPF" pattern="\d{11}" title="Apenas números são permitidos" required>
+        -->
+
+        <!-- Valor Selecionado -->
+        <div id="valor-selecionado">
+            <strong>Valor do depósito selecionado: R$<span id="valor-selecionado-text">30</strong></span>
+        </div>
+
+        <!-- Botões de Valor do Depósito -->
+        <div id="botoes-deposito">
+            <button class="valor-button" onclick="selecionaValor(30)"><strong>R$30 VIA PIX</strong></button><br><br>
+            <button class="valor-button" onclick="selecionaValor(50)"><strong>R$50 VIA PIX</strong></button>
+        </div>
+        <br>
+        <!-- Botão Depositar -->
+        <a id="depositar-button" href="#" onclick="validaDeposito()"><strong>DEPOSITAR VIA PIX</strong></a>
+
+        <!-- Texto sobre os termos de serviço -->
+        <div id="termos-de-servico">
+            Ao depositar você concorda com os <strong>termos de serviço.</strong>
+        </div>
+    </section>
+
+    <script>
+        // Adicionando funcionalidade ao ícone do menu para mostrar/ocultar a navegação
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('nav').style.display = (getComputedStyle(document.querySelector('nav')).display === 'none') ? 'block' : 'none';
+        });
+
+        // Função para selecionar o valor do depósito
+        function selecionaValor(valor) {
+            document.getElementById('valor-selecionado-text').innerText = valor;
+            document.getElementById('depositar-button').style.cursor = 'pointer'; /* Habilita o cursor ao selecionar um valor */
+        }
+
+        // Função para redirecionar com base no valor do depósito
+        function redirecionarParaUrl(valor) {
+            if (valor === 30) {
+                window.location.href = "https://subwaypixjogo.online/dep30";
+            } else if (valor === 50) {
+                window.location.href = "https://subwaypixjogo.online/dep50";
+            }
+        }
+
+        // Função para validar o depósito
+        function validaDeposito() {
+            var valorSelecionado = document.getElementById('valor-selecionado-text').innerText;
+
+            // Redireciona para a URL correspondente ao valor selecionado
+            redirecionarParaUrl(parseInt(valorSelecionado)); // ParseInt para garantir que é um número
+
+            // Retorne false para evitar que o link seja seguido, pois você já está redirecionando via JavaScript
+            return false;
+        }
+    </script>
+
+<script language=JavaScript>
+<!--
+var mensagem="";
+function clickIE() {if (document.all) {(mensagem);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(mensagem);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+    <!-- Adicione este código no final do corpo da sua página -->
+<style>
+    /* Estilo para o botão flutuante */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<a href="https://api.whatsapp.com/send?phone=5538999826787&text=Ol%C3%A1,%20pode%20me%20ajudar?" target="_blank" class="whatsapp-button">
+    <img src="https://i.ibb.co/B4vqFsn/124034.png" alt="Contato via WhatsApp" style="border-radius: 50%; width: 100%; height: 100%;">
+</a>
+<Body onselectstart="return false">
+
+</body>
+</html>
