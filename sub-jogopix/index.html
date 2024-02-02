@@ -7,6 +7,7 @@
     <meta name="viewport" content="height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover" />
     <meta name="description" content="">
     <title>Subway Surfers Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Estilos aqui */
         body, html {
@@ -14,12 +15,18 @@
             height: 100%;
             overflow: hidden;
             background-color: #0b316b; /* Cor de fundo semelhante ao Subway Surfers */
+            font-family: 'Roboto', sans-serif; /* Adiciona a fonte Roboto ao corpo do documento */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
             width: 100%;
             height: 100%;
             display: none;
+            text-align: center; /* Centraliza o conteúdo da container */
         }
 
         .game-frame {
@@ -50,28 +57,60 @@
             background-color: #f7941e; /* Cor de fundo do botão Subway Surfers */
             color: #fff; /* Cor do texto do botão */
             font-size: 24px; /* Tamanho da fonte do botão */
+            font-weight: bold; /* Deixa as letras mais grossas */
             padding: 20px; /* Espaçamento interno do botão */
             border: none;
             cursor: pointer;
             border-radius: 10px; /* Cantos arredondados do botão */
-            display: block;
-            margin: auto;
-            margin-top: 50vh; /* Ajuste para centralizar verticalmente na tela */
+            margin-top: 20px;
         }
 
         .custom-button:hover {
             background-color: #d87a16; /* Cor de fundo ao passar o mouse sobre o botão */
+        }
+
+        /* Estilo da headline ao lado do botão */
+        .headline {
+            font-size: 42px; /* Aumenta o tamanho da fonte da headline */
+            font-weight: bold; /* Deixa as letras mais grossas */
+            color: #fff;
+            margin-bottom: 10px; /* Adiciona margem inferior à headline */
+        }
+
+        /* Estilo da subheadline acima do botão */
+        .subheadline {
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace; /* Adiciona a fonte de máquina antiga */
+            color: #fff;
+            margin-bottom: 20px; /* Adiciona margem inferior à subheadline */
+        }
+
+        /* Estilo para a imagem */
+        .logo-image {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <!-- Seção de início do jogo -->
     <div class="start">
+        <!-- Imagem acima da headline -->
+        <center><img class="logo-image" src="https://i.ibb.co/mqSRg5x/Subway-Surfers-logo.png" alt="Subway Surfers Logo"></center>
+
+        <!-- Headline ao lado do botão -->
+        <center><div class="headline">SURFE E LUCRE!</div></center>
+
+        <!-- Subheadline acima do botão -->
+       <center><div class="subheadline">Cada moeda coletada é equivalente a R$ 0,10, quanto mais correr mais você ganha!</div></center>
+
         <!-- Botão personalizado para começar o jogo -->
-        <button id="jsstartgame" class="custom-button js-start-game" type="button">
-            SURFAR E LUCRAR!!
-        </button>
-    </div>
+        <center><button id="jsstartgame" class="custom-button js-start-game" type="button">
+            INICIAR PARTIDA
+        </button></center><br><br>
+        <!-- Subheadline abaixo do botão -->
+        <center><div class="subheadline">Ao finalizar a partida seu saldo real será contabilizado!</div></center>
+    </div><br><br>
 
     <!-- Seção do contêiner do jogo -->
     <div class="container">
@@ -95,7 +134,7 @@
             document.querySelector('.start').style.display = 'none';
 
             // Exibir a seção do contêiner do jogo
-            document.querySelector('.container').style.display = 'block';
+            document.querySelector('.container').style.display = 'flex';
 
             // Atualizar a fonte do iframe com a URL do jogo
             document.getElementById('game-iframe').src = 'https://i.gamesgo.net/uploads/game/html5/25439/';
@@ -113,5 +152,20 @@
             }
         }
     </script>
+
+    <script language=JavaScript>
+        var mensagem = "";
+        function clickIE() {if (document.all) {(mensagem);return false;}}
+        function clickNS(e) {if 
+        (document.layers||(document.getElementById&&!document.all)) {
+        if (e.which==2||e.which==3) {(mensagem);return false;}}}
+        if (document.layers) 
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+    </script>
+    
+    <Body onselectstart="return false">
+
 </body>
 </html>
