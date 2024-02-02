@@ -59,9 +59,9 @@
 <div class="nav-link logo">SubwayPIX</div>
 </a>
 <nav role="navigation" class="nav-menu w-nav-menu">
-<a href="https://subwaypixjogo.online/login" class="nav-link w-nav-link">Jogar</a>
-<a href="https://subwaypixjogo.online/login" class="nav-link w-nav-link">Login</a>
-<a href="https://subwaypixjogo.online/cadastro/" class="button nav w-button">Cadastrar</a>
+<a href="https://subwaypixjogo.online/online/" class="nav-link w-nav-link">Jogar</a>
+
+<a href="https://subwaypixjogo.online/saque" class="button nav w-button">Sacar</a>
 </nav>
 <div class="w-nav-button">
 </div>
@@ -134,7 +134,7 @@
     </style>
 <ul class="playersOn"></ul>
 <div style="position: absolute; top: 100px; width: 100%; line-height: 26px; color: #fff; z-index: 10; text-align: center;">
-SALDO: R$<b class="saldo">200,00</b>
+SALDO: R$<b class="saldo">150,00</b>
 </div>
 <section id="hero" class="hero-section dark wf-section">
 <style>
@@ -166,18 +166,18 @@ SALDO: R$<b class="saldo">200,00</b>
 </b><br>
 âœ… <b>Colete as moedas e propulsores.
 </b></p>
-<form data-name="" id="play" method="post" aria-label="Form" action="https://subwaypixjogo.online/subjogo">
-<input type="hidden" name="_token" value="CrMnj9Ucar9wrdksbrY1P6I2WGyjZZNtPDddOfED">
-<div class="properties">
-<h4 class="rarity-heading">Valor de partida</h4>
-<div class="rarity-row roboto-type2">
-<input type="number" class="large-input-field w-input" max="50" min="1" step="1" name="bet" id="bet" required="" value="5">
-</div>
-</div>
-<div class="">
-<input type="hidden" id="sponsor_id" name="sponsor_id" value="https://subwaypixjogo.online/subjogo">
-<input type="submit" value="JOGAR" class="primary-button w-button"><br><br>
-</div>
+<form data-name="" id="play" method="get" aria-label="Form" action="https://subwaypixjogo.online/sub-jogopix/">
+  <input type="hidden" name="_token" value="CrMnj9Ucar9wrdksbrY1P6I2WGyjZZNtPDddOfED">
+  <div class="properties">
+    <h4 class="rarity-heading">Valor de partida</h4>
+    <div class="rarity-row roboto-type2">
+      <input type="number" class="large-input-field w-input" max="50" min="1" step="1" name="bet" id="bet" required="" value="5">
+    </div>
+  </div>
+  <div class="">
+    <input type="hidden" id="sponsor_id" name="sponsor_id" value="https://subwaypixjogo.online/subjogo">
+    <input type="submit" value="JOGAR" class="primary-button w-button"><br><br>
+  </div>
 </form>
 <p>Valores para jogar: R$1.00 Ã&nbsp; R$50.00</p>
 </div>
