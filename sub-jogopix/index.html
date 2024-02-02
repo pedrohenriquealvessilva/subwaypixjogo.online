@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover" />
     <meta name="description" content="">
-    <title>Subway Surfers Web</title>
+    <title>SubwayPIX</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Estilos aqui */
@@ -20,6 +20,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overscroll-behavior-y: none; /* Impede o deslocamento vertical */
         }
 
         .container {
@@ -30,8 +31,8 @@
         }
 
         .game-frame {
-            width: 100%;
-            height: 100%;
+            width: 100vw; /* Preenche a largura da tela */
+            height: 100vh; /* Preenche a altura da tela */
         }
 
         .iframe-buttons {
@@ -89,6 +90,15 @@
         .logo-image {
             max-width: 100%;
             height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o texto ao finalizar a partida */
+        .end-game-text {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 20px;
+            display: block;
         }
     </style>
 </head>
@@ -102,15 +112,16 @@
         <center><div class="headline">SURFE E LUCRE!</div></center>
 
         <!-- Subheadline acima do botão -->
-       <center><div class="subheadline">Cada moeda coletada é equivalente a R$ 0,10, quanto mais correr mais você ganha!</div></center>
+        <center><div class="subheadline">Cada moeda coletada é equivalente a R$ 0,10, quanto mais correr mais você ganha!</div></center>
 
         <!-- Botão personalizado para começar o jogo -->
         <center><button id="jsstartgame" class="custom-button js-start-game" type="button">
             INICIAR PARTIDA
-        </button></center><br><br>
-        <!-- Subheadline abaixo do botão -->
-        <center><div class="subheadline">Ao finalizar a partida seu saldo real será contabilizado!</div></center>
-    </div><br><br>
+        </button></center></center>
+    </div>
+
+    <!-- Subheadline acima do botão -->
+    <center><div class="subheadline end-game-text">Ao finalizar a partida seu saldo real será contabilizado!</div></center>
 
     <!-- Seção do contêiner do jogo -->
     <div class="container">
@@ -133,6 +144,9 @@
             // Quando o botão for clicado, ocultar a seção de início
             document.querySelector('.start').style.display = 'none';
 
+            // Ocultar o texto ao finalizar a partida
+            document.querySelector('.end-game-text').style.display = 'none';
+
             // Exibir a seção do contêiner do jogo
             document.querySelector('.container').style.display = 'flex';
 
@@ -154,18 +168,14 @@
     </script>
 
     <script language=JavaScript>
-        var mensagem = "";
+        var mensagem="";
         function clickIE() {if (document.all) {(mensagem);return false;}}
-        function clickNS(e) {if 
-        (document.layers||(document.getElementById&&!document.all)) {
-        if (e.which==2||e.which==3) {(mensagem);return false;}}}
-        if (document.layers) 
-        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        function clickNS(e) {if (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(mensagem);return false;}}}
+        if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
         else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
         document.oncontextmenu=new Function("return false")
     </script>
-    
     <Body onselectstart="return false">
-
 </body>
 </html>
