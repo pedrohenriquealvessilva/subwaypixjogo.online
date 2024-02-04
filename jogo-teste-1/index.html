@@ -180,16 +180,6 @@
             window.location.href = '../../deposito';
         }
 
-        var totalRodadas = localStorage.getItem("contaRodadas")
-
-        if (totalRodadas !== null && parseInt(totalRodadas) >= 3000) {
-            alert("Você já usou suas 3 rodadas grátis")
-            redirecionar()
-        } else if (totalRodadas === null) {
-            localStorage.setItem("contaRodadas", 3000)
-        } else {
-            localStorage.setItem("contaRodadas", parseInt(totalRodadas) + 1000)
-        }
     </script>
     <div id="message">
         <h3>Carregando</h3>
