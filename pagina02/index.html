@@ -1,0 +1,764 @@
+<!DOCTYPE html><html lang="en-US"><head>
+	<meta charset="UTF-8">
+		<title>Aplicativo Espião</title>
+
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="hello-elementor-css" href="css/style.min.css" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="css/theme.min.css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="css/frontend-lite.min_1.css" media="all">
+<link rel="stylesheet" id="elementor-post-10-css" href="css/post-10.css" media="all">
+<link rel="stylesheet" id="eael-general-css" href="css/general.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="eael-238-css" href="css/eael-238.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" media="all">
+<style id="elementor-icons-inline-css">
+
+		.elementor-add-new-section .elementor-add-templately-promo-button{
+            background-color: #5d4fff;
+            background-image: var(--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c);
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+        }
+        
+		.elementor-add-new-section .elementor-add-templately-promo-button > i{
+            height: 12px;
+        }
+        
+        body .elementor-add-new-section .elementor-add-section-area-button {
+            margin-left: 0;
+        }
+
+		.elementor-add-new-section .elementor-add-templately-promo-button{
+            background-color: #5d4fff;
+            background-image: var(--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c);
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+        }
+        
+		.elementor-add-new-section .elementor-add-templately-promo-button > i{
+            height: 12px;
+        }
+        
+        body .elementor-add-new-section .elementor-add-section-area-button {
+            margin-left: 0;
+        }
+</style>
+<link data-minify="1" rel="stylesheet" id="swiper-css" href="css/swiper.min.css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="css/frontend-lite.min.css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="css/global.css" media="all">
+<link rel="stylesheet" id="elementor-post-238-css" href="css/post-238.css" media="all">
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:var(--wpr-bg-914198b1-6217-49bf-a47e-b13706cc9847) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.5.5" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="css/fontawesome.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-solid-css" href="css/solid.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-brands-css" href="css/brands.min.css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><script src="js/jquery.min_1.js" id="jquery-core-js" defer=""></script>
+<script src="js/jquery-migrate.min.js" id="jquery-migrate-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://espiaoinvisivel.com/wp-json/"><link rel="alternate" type="application/json" href="https://espiaoinvisivel.com/wp-json/wp/v2/pages/238"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://espiaoinvisivel.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.5.5">
+<link rel="canonical" href="https://espiaoinvisivel.com/newpasso02/">
+<link rel="shortlink" href="https://espiaoinvisivel.com/?p=238">
+<link rel="alternate" type="application/json+oembed" href="https://espiaoinvisivel.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fespiaoinvisivel.com%2Fnewpasso02%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://espiaoinvisivel.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fespiaoinvisivel.com%2Fnewpasso02%2F&amp;format=xml">
+<!-- HFCM by 99 Robots - Snippet # 1: VELOCIDADE VTURB -->
+<link rel="preload" href="https://scripts.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/players/65262bf1b3bc0300090f6ee6/player.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://images.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/players/65262bf1b3bc0300090f6ee6/thumbnail.jpg" as="image">
+<link rel="preload" href="https://cdn.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/6517bbbac149ff00091c4dae/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+<!-- /end HFCM by 99 Robots -->
+
+<link rel="preload" href="https://scripts.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/players/665ccfb03515dd000b9db616/player.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://images.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/players/665ccfb03515dd000b9db616/thumbnail.jpg" as="image">
+<link rel="preload" href="https://cdn.converteai.net/9581cd38-0dee-4366-bfd7-eeb983591eda/665ccf8a3515dd000b9db5f5/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+<!-- /end HFCM by 99 Robots -->
+<meta name="generator" content="Elementor 3.22.1; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c: url('https://espiaoinvisivel.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg');}.elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-6dd9b836-7a77-4f5a-8acf-0797de524e98: url('https://espiaoinvisivel.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg');}.rll-youtube-player .play{--wpr-bg-914198b1-6217-49bf-a47e-b13706cc9847: url('https://espiaoinvisivel.com/wp-content/plugins/wp-rocket/assets/img/youtube.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".elementor-add-new-section .elementor-add-templately-promo-button","style":".elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg');}","hash":"1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg"},{"selector":".elementor-add-new-section .elementor-add-templately-promo-button","style":".elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-6dd9b836-7a77-4f5a-8acf-0797de524e98: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg');}","hash":"6dd9b836-7a77-4f5a-8acf-0797de524e98","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg"},{"selector":".rll-youtube-player .play","style":".rll-youtube-player .play{--wpr-bg-914198b1-6217-49bf-a47e-b13706cc9847: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png');}","hash":"914198b1-6217-49bf-a47e-b13706cc9847","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png"}]; const rocket_excluded_pairs = [];</script><script src="js/player.js" async=""></script><script src="js/wp-emoji-release.min.js" defer=""></script></head>
+<body class="page-template page-template-elementor_canvas page page-id-238 elementor-default elementor-template-canvas elementor-kit-10 elementor-page elementor-page-238">
+			<div data-elementor-type="wp-page" data-elementor-id="238" class="elementor elementor-238" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-b9b2fe4 e-flex e-con-boxed e-con e-parent" data-id="b9b2fe4" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a67202f elementor-widget elementor-widget-image" data-id="a67202f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.22.0 - 17-06-2024 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>										<img fetchpriority="high" decoding="async" width="800" height="800" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E" class="attachment-large size-large wp-image-466" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy.png 1000w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-300x300.png 300w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-150x150.png 150w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-768x768.png 768w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy.png"><noscript><img fetchpriority="high" decoding="async" width="800" height="800" src="https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy.png" class="attachment-large size-large wp-image-466" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy.png 1000w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-300x300.png 300w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-150x150.png 150w, https://espiaoinvisivel.com/wp-content/uploads/2024/01/logo-spy-768x768.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c6fea61 e-flex e-con-boxed e-con e-parent" data-id="c6fea61" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+						<div style="text-align:center; margin-bottom:10px;">
+            <img src="https://i.ibb.co/85xy7qS/a.png" alt="Descrição da Imagem" style="max-width:100%; height:auto;">
+        </div>
+				<div class="elementor-element elementor-element-752273e elementor-widget elementor-widget-html" data-id="752273e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div id="vid_6685c3eedee343000b5d225d" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_6685c3eedee343000b5d225d" src="https://images.converteai.net/e1f13ddd-0a6d-4a74-822f-191462689333/players/6685c3eedee343000b5d225d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_6685c3eedee343000b5d225d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_6685c3eedee343000b5d225d"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/e1f13ddd-0a6d-4a74-822f-191462689333/players/6685c3eedee343000b5d225d/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4193a3d elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4193a3d" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-bolt"></i>						</span>
+										<span class="elementor-icon-list-text">ASSISTA O VÍDEO PARA CARREGAR AS MENSAGENS RÁPIDO</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-e114298 e-flex e-con-boxed e-con e-parent" data-id="e114298" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-6c8963b delay elementor-widget elementor-widget-image" data-id="6c8963b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img decoding="async" width="1536" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201536%20225'%3E%3C/svg%3E" class="attachment-1536x1536 size-1536x1536 wp-image-247" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl.png 1536w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-300x44.png 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-1024x150.png 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-768x113.png 768w" data-lazy-sizes="(max-width: 1536px) 100vw, 1536px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl.png"><noscript><img decoding="async" width="1536" height="225" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl.png" class="attachment-1536x1536 size-1536x1536 wp-image-247" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl.png 1536w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-300x44.png 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-1024x150.png 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/img-abaixo-vsl-768x113.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-087d937 e-flex e-con-boxed e-con e-parent" data-id="087d937" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-e33d29d delay elementor-widget elementor-widget-image" data-id="e33d29d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" title="Passo 02" alt="Passo 02" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/Passo-02.jpg"><noscript><img decoding="async" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/Passo-02.jpg" title="Passo 02" alt="Passo 02" loading="lazy" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-e61f0b2 e-flex e-con-boxed e-con e-parent" data-id="e61f0b2" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-d8a4bb9 delay elementor-widget elementor-widget-heading" data-id="d8a4bb9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.22.0 - 17-06-2024 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Para ter acesso ás mensagens você precisa pagar uma taxa única para que possamos manter nosso servidor funcionando normalmente.
+<br>
+<span style="color:#d00000">LOCALIZAÇÕES ENCONTRADAS <br>
+<span style="color:#14b914">
+VEJA APÓS O PAGAMENTO DA TAXA
+</span></span></h2>		</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-0d6307b delay e-flex e-con-boxed e-con e-parent" data-id="0d6307b" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-0344e91 delay elementor-widget elementor-widget-image" data-id="0344e91" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+														<a href="https://www.google.com/">
+							<img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" title="IMG BOTÃO 67" alt="IMG BOTÃO 67" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2024/02/IMG-BOTAO-67-.png"><noscript><img decoding="async" src="https://espiaoinvisivel.com/wp-content/uploads/2024/02/IMG-BOTAO-67-.png" title="IMG BOTÃO 67" alt="IMG BOTÃO 67" loading="lazy" /></noscript>								</a>
+													</div>
+				</div>
+				<div class="elementor-element elementor-element-e3f92e9 delay elementor-widget elementor-widget-image" data-id="e3f92e9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+														<a href="https://www.google.com/">
+							<img decoding="async" width="418" height="627" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20418%20627'%3E%3C/svg%3E" class="attachment-medium_large size-medium_large wp-image-603" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear.webp 418w, https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear-200x300.webp 200w" data-lazy-sizes="(max-width: 418px) 100vw, 418px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear.webp"><noscript><img decoding="async" width="418" height="627" src="https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear.webp" class="attachment-medium_large size-medium_large wp-image-603" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear.webp 418w, https://espiaoinvisivel.com/wp-content/uploads/2024/06/desbloquear-200x300.webp 200w" sizes="(max-width: 418px) 100vw, 418px" /></noscript>								</a>
+													</div>
+				</div>
+				<div class="elementor-element elementor-element-d79d486 delay elementor-widget elementor-widget-image" data-id="d79d486" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img decoding="async" width="250" height="250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%20250'%3E%3C/svg%3E" class="attachment-medium_large size-medium_large wp-image-442" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d.png 250w, https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d-150x150.png 150w" data-lazy-sizes="(max-width: 250px) 100vw, 250px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d.png"><noscript><img loading="lazy" decoding="async" width="250" height="250" src="https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d.png" class="attachment-medium_large size-medium_large wp-image-442" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d.png 250w, https://espiaoinvisivel.com/wp-content/uploads/2023/12/garantia-30d-150x150.png 150w" sizes="(max-width: 250px) 100vw, 250px" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-e7dd330 e-flex e-con-boxed e-con e-parent" data-id="e7dd330" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-d920224 e-flex e-con-boxed e-con e-child" data-id="d920224" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-402c64e elementor-widget elementor-widget-eael-progress-bar" data-id="402c64e" data-element_type="widget" data-widget_type="eael-progress-bar.default">
+				<div class="elementor-widget-container">
+			<div class="eael-progressbar-circle-container center">
+                
+
+                <div class="eael-progressbar eael-progressbar-circle" data-layout="circle" data-count="100" data-duration="327000">
+                    <div class="eael-progressbar-circle-pie">
+                        <div class="eael-progressbar-circle-half-left eael-progressbar-circle-half"></div>
+                        <div class="eael-progressbar-circle-half-right eael-progressbar-circle-half"></div>
+                    </div>
+                    <div class="eael-progressbar-circle-inner"></div>
+                    <div class="eael-progressbar-circle-inner-content">
+                        
+                        <span class="eael-progressbar-count-wrap"><span class="eael-progressbar-count">0</span><span class="postfix">%</span></span>
+                    </div>
+                </div>
+
+                
+            </div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-19cafe5 elementor-widget elementor-widget-heading" data-id="19cafe5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">O APLICATIVO ESPIÃO ESTÁ FAZENDO UMA CÓPIA DE SEGURANÇA DE TODOS OS DADOS ENCONTRADOS, POR FAVOR AGUARDE DE 2 A 4 MINUTOS.</h2>		</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c6ec6b4 e-flex e-con-boxed e-con e-parent" data-id="c6ec6b4" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-8d4085f elementor-widget elementor-widget-heading" data-id="8d4085f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					</div>
+				</div>
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1cc93306 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1cc93306" data-element_type="section" data-settings="{" background_background":"classic"}"="">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-46465d4c" data-id="46465d4c" data-element_type="column" data-settings="{" background_background":"classic"}"="">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4a228bf elementor-widget elementor-widget-heading" data-id="4a228bf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Mostrando 12 de 692 Comentários</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6232b2eb elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="6232b2eb" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.22.0 - 17-06-2024 */
+.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#0c0d0e;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x}.elementor-widget-divider .elementor-divider{display:flex}.elementor-widget-divider .elementor-divider__text{font-size:15px;line-height:1;max-width:95%}.elementor-widget-divider .elementor-divider__element{margin:0 var(--divider-element-spacing);flex-shrink:0}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size)}.elementor-widget-divider .elementor-divider-separator{display:flex;margin:0;direction:ltr}.elementor-widget-divider--view-line_icon .elementor-divider-separator,.elementor-widget-divider--view-line_text .elementor-divider-separator{align-items:center}.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,.elementor-widget-divider--view-line_text .elementor-divider-separator:after,.elementor-widget-divider--view-line_text .elementor-divider-separator:before{display:block;content:"";border-block-end:0;flex-grow:1;border-block-start:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-left .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-left .elementor-divider__element{margin-left:0}.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-right .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-right .elementor-divider__element{margin-right:0}.elementor-widget-divider--element-align-start .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-start .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-start .elementor-divider__element{margin-inline-start:0}.elementor-widget-divider--element-align-end .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-end .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-end .elementor-divider__element{margin-inline-end:0}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-block-start:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--separator-type-pattern{--divider-border-style:none}.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator{width:100%;min-height:var(--divider-pattern-height);-webkit-mask-size:var(--divider-pattern-size) 100%;mask-size:var(--divider-pattern-size) 100%;-webkit-mask-repeat:var(--divider-pattern-repeat);mask-repeat:var(--divider-pattern-repeat);background-color:var(--divider-color);-webkit-mask-image:var(--divider-pattern-url);mask-image:var(--divider-pattern-url)}.elementor-widget-divider--no-spacing{--divider-pattern-size:auto}.elementor-widget-divider--bg-round{--divider-pattern-repeat:round}.rtl .elementor-widget-divider .elementor-divider__text{direction:rtl}.e-con-inner>.elementor-widget-divider,.e-con>.elementor-widget-divider{width:var(--container-widget-width,100%);--flex-grow:var(--container-widget-flex-grow)}</style>		<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-3c7e9643 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3c7e9643" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1d1cb010" data-id="1d1cb010" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-833da19 elementor-widget elementor-widget-testimonial" data-id="833da19" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.22.0 - 17-06-2024 */
+.elementor-testimonial-wrapper{overflow:hidden;text-align:center}.elementor-testimonial-wrapper .elementor-testimonial-content{font-size:1.3em;margin-bottom:20px}.elementor-testimonial-wrapper .elementor-testimonial-name{line-height:1.5;display:block}.elementor-testimonial-wrapper .elementor-testimonial-job{font-size:.85em;display:block}.elementor-testimonial-wrapper .elementor-testimonial-meta{width:100%;line-height:1}.elementor-testimonial-wrapper .elementor-testimonial-meta-inner{display:inline-block}.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-details,.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-image{display:table-cell;vertical-align:middle}.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-image img{width:60px;height:60px;border-radius:50%;-o-object-fit:cover;object-fit:cover;max-width:none}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-aside .elementor-testimonial-image{padding-inline-end:15px}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-aside .elementor-testimonial-details{text-align:start}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-details,.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-image{display:block}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-image{margin-bottom:20px}</style>		<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="1080" height="1080" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201080%201080'%3E%3C/svg%3E" class="attachment-full size-full wp-image-114" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n.jpg 1080w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-1024x1024.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-768x768.jpg 768w" data-lazy-sizes="(max-width: 1080px) 100vw, 1080px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n.jpg"><noscript><img loading="lazy" decoding="async" width="1080" height="1080" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n.jpg" class="attachment-full size-full wp-image-114" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n.jpg 1080w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-1024x1024.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/360149881_3578688009041442_287570193850152406_n-768x768.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Júlia Dapher</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; background-color: rgb(246, 246, 246); font-family: Helvetica, sans-serif;">O sistema funciona muito bem mas infelizmente descobri que estava sendo enganada pelo meu ex- namorado😭😭😭</span><div data-id="4ab20dd3" data-element_type="widget" data-widget_type="text-editor.default" style="white-space-collapse: collapse; flex-basis: var(--flex-basis); flex-grow: var(--flex-grow); flex-shrink: var(--flex-shrink); order: var(--order); align-self: var(--align-self); flex-direction: var(--flex-direction); flex-wrap: var(--flex-wrap); justify-content: var(--justify-content); align-items: var(--align-items); align-content: var(--align-content); gap: var(--gap); --swiper-theme-color: #000; --swiper-navigation-size: 44px; --swiper-pagination-bullet-size: 6px; --swiper-pagination-bullet-horizontal-gap: 6px; --widgets-spacing: 20px; color: rgb(144, 148, 172); font-family: Roboto, sans-serif; width: var( --container-widget-width, 84% ); margin-bottom: 0px; max-width: 84%; font-size: 13px; --container-widget-width: 84%; --container-widget-flex-grow: 0;"></div></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5945ffe1 elementor-widget elementor-widget-heading" data-id="5945ffe1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 3 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-5986a4f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5986a4f9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-447d3ca0" data-id="447d3ca0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6d0e1559 elementor-widget elementor-widget-testimonial" data-id="6d0e1559" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="782" height="802" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20782%20802'%3E%3C/svg%3E" class="attachment-full size-full wp-image-107" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n.jpg 782w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n-293x300.jpg 293w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n-768x788.jpg 768w" data-lazy-sizes="(max-width: 782px) 100vw, 782px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n.jpg"><noscript><img loading="lazy" decoding="async" width="782" height="802" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n.jpg" class="attachment-full size-full wp-image-107" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n.jpg 782w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n-293x300.jpg 293w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/383206764_344082328051839_6560224466354825286_n-768x788.jpg 768w" sizes="(max-width: 782px) 100vw, 782px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Monica Gâmbeta</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);"></span><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Finalmente encontrei algo que realmente funciona… Estou procurando por isso há muito tempo</span><br><div data-id="4ab20dd3" data-element_type="widget" data-widget_type="text-editor.default" style="white-space-collapse: collapse; flex-basis: var(--flex-basis); flex-grow: var(--flex-grow); flex-shrink: var(--flex-shrink); order: var(--order); align-self: var(--align-self); flex-direction: var(--flex-direction); flex-wrap: var(--flex-wrap); justify-content: var(--justify-content); align-items: var(--align-items); align-content: var(--align-content); gap: var(--gap); --swiper-theme-color: #000; --swiper-navigation-size: 44px; --swiper-pagination-bullet-size: 6px; --swiper-pagination-bullet-horizontal-gap: 6px; --widgets-spacing: 20px; color: rgb(144, 148, 172); font-family: Roboto, sans-serif; width: var( --container-widget-width, 84% ); margin-bottom: 0px; max-width: 84%; font-size: 13px; --container-widget-width: 84%; --container-widget-flex-grow: 0;"></div></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7f0aa0c9 elementor-widget elementor-widget-heading" data-id="7f0aa0c9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 8 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-763934d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="763934d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0630496" data-id="0630496" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-bb83019 elementor-widget elementor-widget-testimonial" data-id="bb83019" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="1400" height="882" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201400%20882'%3E%3C/svg%3E" class="attachment-full size-full wp-image-399" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g.jpg 1400w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-300x189.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-1024x645.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-768x484.jpg 768w" data-lazy-sizes="(max-width: 1400px) 100vw, 1400px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g.jpg"><noscript><img loading="lazy" decoding="async" width="1400" height="882" src="https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g.jpg" class="attachment-full size-full wp-image-399" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g.jpg 1400w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-300x189.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-1024x645.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/11/1_g09N-jl7JtVjVZGcd-vL2g-768x484.jpg 768w" sizes="(max-width: 1400px) 100vw, 1400px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Sirley Chilman</div>
+																						<div class="elementor-testimonial-job"><font face="Helvetica, sans-serif"><span style="white-space-collapse: collapse; background-color: rgb(246, 246, 246);">Quando comprei pensei que era golpe, porque ja comprei varios outros e nenhum funcionava, mas mesmo assim decidi ver se funciona porquet tem a garantia e realmente queria ver o que meu noivo conversava, ai quando fui abrir realmente funciono porque eu mandei uma mensagem e caia tudo no aplicativo</span></font></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-df3908c elementor-widget elementor-widget-heading" data-id="df3908c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 8 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-53b1d1f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53b1d1f5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-756117ff" data-id="756117ff" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-58cfd048 elementor-widget elementor-widget-testimonial" data-id="58cfd048" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="540" height="960" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20540%20960'%3E%3C/svg%3E" class="attachment-full size-full wp-image-103" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n.jpg 540w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n-169x300.jpg 169w" data-lazy-sizes="(max-width: 540px) 100vw, 540px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n.jpg"><noscript><img loading="lazy" decoding="async" width="540" height="960" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n.jpg" class="attachment-full size-full wp-image-103" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n.jpg 540w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/314495942_112920164965482_2213646945431288797_n-169x300.jpg 169w" sizes="(max-width: 540px) 100vw, 540px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Rogério Alencar</div>
+																						<div class="elementor-testimonial-job"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Tentei outros apps e sem sucesso, esse foi o único que realmente funcionou e não deixou rastros, muito bom 👏👏</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a122f99 elementor-widget elementor-widget-heading" data-id="a122f99" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 10 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-460c3fb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="460c3fb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ac7b3f6" data-id="ac7b3f6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-43f4715 elementor-widget elementor-widget-testimonial" data-id="43f4715" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="1069" height="1069" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201069%201069'%3E%3C/svg%3E" class="attachment-full size-full wp-image-113" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n.jpg 1069w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-1024x1024.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-768x768.jpg 768w" data-lazy-sizes="(max-width: 1069px) 100vw, 1069px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n.jpg"><noscript><img loading="lazy" decoding="async" width="1069" height="1069" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n.jpg" class="attachment-full size-full wp-image-113" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n.jpg 1069w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-1024x1024.jpg 1024w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/342522711_782084723336258_1866238121762026095_n-768x768.jpg 768w" sizes="(max-width: 1069px) 100vw, 1069px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Geovana Morais</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Obrigado por terem feito esse aplicativo, quase não acreditei porque já usei milhares de outros, mas esse me mostrou TUDO do meu marido, vou indicar pras minhas amigas também</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d218e07 elementor-widget elementor-widget-heading" data-id="d218e07" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 17 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-9e681e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9e681e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3cc87958" data-id="3cc87958" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-43d31e1a elementor-widget elementor-widget-testimonial" data-id="43d31e1a" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="960" height="960" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20960%20960'%3E%3C/svg%3E" class="attachment-full size-full wp-image-111" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n.jpg 960w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-768x768.jpg 768w" data-lazy-sizes="(max-width: 960px) 100vw, 960px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n.jpg"><noscript><img loading="lazy" decoding="async" width="960" height="960" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n.jpg" class="attachment-full size-full wp-image-111" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n.jpg 960w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/271981121_490083249147301_1285133025912119197_n-768x768.jpg 768w" sizes="(max-width: 960px) 100vw, 960px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Mauricio Santos</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Alguém sabe se realmente funciona?</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-786cd1f7 elementor-widget elementor-widget-heading" data-id="786cd1f7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 27 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-5cbb3944 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5cbb3944" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5175ceab" data-id="5175ceab" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-21d60dad elementor-widget elementor-widget-testimonial" data-id="21d60dad" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="320" height="320" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20320%20320'%3E%3C/svg%3E" class="attachment-full size-full wp-image-99" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n.jpg 320w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 320px) 100vw, 320px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n.jpg"><noscript><img loading="lazy" decoding="async" width="320" height="320" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n.jpg" class="attachment-full size-full wp-image-99" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n.jpg 320w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/65780059_2390804997870416_2673752815481913344_n-150x150.jpg 150w" sizes="(max-width: 320px) 100vw, 320px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Cleberson Junior</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Funciona muito bem, já ativei o sistema no meu celular e tive acesso a tudo, mensagens, fotos, conversas antigas, ligações, é muito bom</span> </div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-45535690 elementor-widget elementor-widget-heading" data-id="45535690" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 17 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-3c2b773 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3c2b773" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b3c302e" data-id="b3c302e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ad81304 elementor-widget elementor-widget-testimonial" data-id="ad81304" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="438" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20438%20438'%3E%3C/svg%3E" class="attachment-full size-full wp-image-112" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg 438w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 438px) 100vw, 438px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg"><noscript><img loading="lazy" decoding="async" width="438" height="438" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg" class="attachment-full size-full wp-image-112" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg 438w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-150x150.jpg 150w" sizes="(max-width: 438px) 100vw, 438px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Maria Janaina</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);"></span><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Alguém sabe se a pessoa pode ver que você tem acesso a tudo?</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e7f4a1f elementor-widget elementor-widget-heading" data-id="e7f4a1f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 32 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-609db05 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="609db05" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b168b65" data-id="b168b65" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ab903af elementor-widget elementor-widget-testimonial" data-id="ab903af" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="960" height="956" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20960%20956'%3E%3C/svg%3E" class="attachment-full size-full wp-image-102" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n.jpg 960w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-768x765.jpg 768w" data-lazy-sizes="(max-width: 960px) 100vw, 960px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n.jpg"><noscript><img loading="lazy" decoding="async" width="960" height="956" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n.jpg" class="attachment-full size-full wp-image-102" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n.jpg 960w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-150x150.jpg 150w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/277432058_1627548047604256_6241145808963078452_n-768x765.jpg 768w" sizes="(max-width: 960px) 100vw, 960px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Mariana Duarte</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Essa é a melhor parte, a pessoa nem imagina</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b1bdeb5 elementor-widget elementor-widget-heading" data-id="b1bdeb5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 25 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-2625372 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2625372" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ef08efb" data-id="ef08efb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5c3a3d2 elementor-widget elementor-widget-testimonial" data-id="5c3a3d2" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="438" height="438" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20438%20438'%3E%3C/svg%3E" class="attachment-full size-full wp-image-112" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg 438w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 438px) 100vw, 438px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg"><noscript><img loading="lazy" decoding="async" width="438" height="438" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg" class="attachment-full size-full wp-image-112" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n.jpg 438w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/274612449_260882256224656_8319268657307552292_n-150x150.jpg 150w" sizes="(max-width: 438px) 100vw, 438px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Maria Janaina</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">obrigado amiga 👍🏻👍🏻</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-856b0a6 elementor-widget elementor-widget-heading" data-id="856b0a6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 12 min</p>		</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-3917fa97 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3917fa97" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-13f7cd1" data-id="13f7cd1" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7c09afe7 elementor-widget elementor-widget-testimonial" data-id="7c09afe7" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="720" height="720" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20720%20720'%3E%3C/svg%3E" class="attachment-full size-full wp-image-106" alt="" data-lazy-srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n.jpg 720w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 720px) 100vw, 720px" data-lazy-src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n.jpg"><noscript><img loading="lazy" decoding="async" width="720" height="720" src="https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n.jpg" class="attachment-full size-full wp-image-106" alt="" srcset="https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n.jpg 720w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n-300x300.jpg 300w, https://espiaoinvisivel.com/wp-content/uploads/2023/10/382470225_346199794416505_6930512318898358324_n-150x150.jpg 150w" sizes="(max-width: 720px) 100vw, 720px" /></noscript>						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">Lucia Moura de Sá</div>
+																						<div class="elementor-testimonial-job"><span style="white-space-collapse: collapse; font-family: Helvetica, sans-serif; background-color: rgb(246, 246, 246);">Quando fui testar achei que era mentira porque eu nunca vi nada assim, meu marido usa zap GB e eu só fui saber depois, peguei ele no pulo do gato, quando eu testei o app vi que funcionava mesmo, tava me traindo há 3 meses, graças a deus me livrei daquele mala</span></div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7b39706 elementor-widget elementor-widget-heading" data-id="7b39706" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Responder · Curtir · Seguir · 48 min</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2bb3439d elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2bb3439d" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-154dfd05 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="154dfd05" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-facebook-square"></i>						</span>
+										<span class="elementor-icon-list-text">Plug-in social do Facebook</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-e4daff4 e-flex e-con-boxed e-con e-parent" data-id="e4daff4" data-element_type="container" data-settings="{" background_background":"classic"}"="">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-3481f1b elementor-widget elementor-widget-heading" data-id="3481f1b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-0393218 elementor-widget elementor-widget-heading" data-id="0393218" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Dúvida comuns</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd57ec8 elementor-widget elementor-widget-toggle" data-id="bd57ec8" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.22.0 - 17-06-2024 */
+.elementor-toggle{text-align:start}.elementor-toggle .elementor-tab-title{font-weight:700;line-height:1;margin:0;padding:15px;border-bottom:1px solid #d5d8dc;cursor:pointer;outline:none}.elementor-toggle .elementor-tab-title .elementor-toggle-icon{display:inline-block;width:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon svg{margin-inline-start:-5px;width:1em;height:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right{float:right;text-align:right}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-left{float:left;text-align:left}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed{display:block}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-opened{display:none}.elementor-toggle .elementor-tab-title.elementor-active{border-bottom:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed{display:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened{display:block}.elementor-toggle .elementor-tab-content{padding:15px;border-bottom:1px solid #d5d8dc;display:none}@media (max-width:767px){.elementor-toggle .elementor-tab-title{padding:12px}.elementor-toggle .elementor-tab-content{padding:12px 10px}}.e-con-inner>.elementor-widget-toggle,.e-con>.elementor-widget-toggle{width:var(--container-widget-width);--flex-grow:var(--container-widget-flex-grow)}</style>		<div class="elementor-toggle">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1981" class="elementor-tab-title" data-tab="1" role="button" aria-controls="elementor-tab-content-1981" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">O Espião é realmente Invisivel, e a pessoa não vai me descobrir?</a>
+					</div>
+
+					<div id="elementor-tab-content-1981" class="elementor-tab-content elementor-clearfix" data-tab="1" role="region" aria-labelledby="elementor-tab-title-1981"><p>Sim, O espião é 100% invisível, Nos garantimos pois usamos o sistema de melhor qualidade do mercado. A pessoa só poderá descobrir se você contar para ela</p></div>
+				</div>
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1982" class="elementor-tab-title" data-tab="2" role="button" aria-controls="elementor-tab-content-1982" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">Eu Vou ter que Pagar mensalmente?</a>
+					</div>
+
+					<div id="elementor-tab-content-1982" class="elementor-tab-content elementor-clearfix" data-tab="2" role="region" aria-labelledby="elementor-tab-title-1982"><p>Não. O Aplicativo é seu pelo resto da vida, a Liçença tem validade de 1 Ano, caso queira adquirir a liçença vitalícia poderá nos contatar no Suporte.</p></div>
+				</div>
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1983" class="elementor-tab-title" data-tab="3" role="button" aria-controls="elementor-tab-content-1983" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">Tem como eu ver a localização da pessoa?</a>
+					</div>
+
+					<div id="elementor-tab-content-1983" class="elementor-tab-content elementor-clearfix" data-tab="3" role="region" aria-labelledby="elementor-tab-title-1983"><p>Sim, Temos a função de ver a localização em tempo Real da pessoa, e se quiser ver alguma localização passada também é possivel.</p></div>
+				</div>
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1984" class="elementor-tab-title" data-tab="4" role="button" aria-controls="elementor-tab-content-1984" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">Vou ver as mensagens em outros aplicativos?</a>
+					</div>
+
+					<div id="elementor-tab-content-1984" class="elementor-tab-content elementor-clearfix" data-tab="4" role="region" aria-labelledby="elementor-tab-title-1984"><p>Sim, você poderá acessar e ver qualquer aplicativo do celular da pessoa.</p></div>
+				</div>
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1985" class="elementor-tab-title" data-tab="5" role="button" aria-controls="elementor-tab-content-1985" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">Eu posso Espiar Mais de uma pessoa?</a>
+					</div>
+
+					<div id="elementor-tab-content-1985" class="elementor-tab-content elementor-clearfix" data-tab="5" role="region" aria-labelledby="elementor-tab-title-1985"><p>Sim, você consegue espionar quantas pessoas Quiser.</p></div>
+				</div>
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1986" class="elementor-tab-title" data-tab="6" role="button" aria-controls="elementor-tab-content-1986" aria-expanded="false">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a class="elementor-toggle-title" tabindex="0" href="?">Se eu Não gostar do Aplicativo posso Pedir Meu dinheiro de Volta?</a>
+					</div>
+
+					<div id="elementor-tab-content-1986" class="elementor-tab-content elementor-clearfix" data-tab="6" role="region" aria-labelledby="elementor-tab-title-1986"><p>Concerteza. Temos certeza que nosso Aplicativo vai te ajudar a monitorar ou rastrear a pessoa que você deseja, mas se por algum motivo não gostar, Você poderá receber 100% do seu dinheiro de volta.</p></div>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-eb91d8a e-flex e-con-boxed e-con e-parent" data-id="eb91d8a" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-157033c elementor-widget elementor-widget-html" data-id="157033c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			
+<script src="js/jquery.min.js" defer=""></script>
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c: url('https://espiaoinvisivel.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg');}.elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-6dd9b836-7a77-4f5a-8acf-0797de524e98: url('https://espiaoinvisivel.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg');}.rll-youtube-player .play{--wpr-bg-914198b1-6217-49bf-a47e-b13706cc9847: url('https://espiaoinvisivel.com/wp-content/plugins/wp-rocket/assets/img/youtube.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".elementor-add-new-section .elementor-add-templately-promo-button","style":".elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg');}","hash":"1ba88ae0-2a54-45ca-b4a6-b7d93a56a59c","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg"},{"selector":".elementor-add-new-section .elementor-add-templately-promo-button","style":".elementor-add-new-section .elementor-add-templately-promo-button{--wpr-bg-6dd9b836-7a77-4f5a-8acf-0797de524e98: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg');}","hash":"6dd9b836-7a77-4f5a-8acf-0797de524e98","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/essential-addons-for-elementor-lite\/assets\/admin\/images\/templately\/logo-icon.svg"},{"selector":".rll-youtube-player .play","style":".rll-youtube-player .play{--wpr-bg-914198b1-6217-49bf-a47e-b13706cc9847: url('https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png');}","hash":"914198b1-6217-49bf-a47e-b13706cc9847","url":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png"}]; const rocket_excluded_pairs = [];</script>
+<script>window.addEventListener('DOMContentLoaded', function() {
+$('.delay').hide();
+setTimeout(function() {
+$('.delay').show();
+}, 327000);
+});</script>
+		</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<!-- HFCM by 99 Robots - Snippet # 3: Tag Manager - Footer -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSWTSMHR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- /end HFCM by 99 Robots -->
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,c,a){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<a.length;e++)s(a[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,e="undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs;e.map(t=>{var e=t.selector;const r=document.querySelectorAll(e);r.forEach(e=>{e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"excluded")})});const o=document.querySelector("#wpr-lazyload-bg-container");var t=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"loaded")}))})}})},{rootMargin:t+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}c();const a=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();t=document.querySelector("body"),a(t,c)}()},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+</script>
+<script src="js/hello-frontend.min.js" id="hello-theme-frontend-js" defer=""></script>
+<script id="eael-general-js-extra">
+var localize = {"ajaxurl":"https:\/\/espiaoinvisivel.com\/wp-admin\/admin-ajax.php","nonce":"c7be635f93","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https:\/\/espiaoinvisivel.com\/newpasso02\/","cart_redirectition":"","cart_page_url":"","el_breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}};
+</script>
+<script src="js/general.min.js" id="eael-general-js" defer=""></script>
+<script src="js/eael-238.js" id="eael-238-js" defer=""></script>
+<script src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js" defer=""></script>
+<script src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js" defer=""></script>
+<script src="js/frontend-modules.min.js" id="elementor-frontend-modules-js" defer=""></script>
+<script src="js/wp-polyfill-inert.min.js" id="wp-polyfill-inert-js" defer=""></script>
+<script src="js/regenerator-runtime.min.js" id="regenerator-runtime-js" defer=""></script>
+<script src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script src="js/hooks.min.js" id="wp-hooks-js"></script>
+<script src="js/i18n.min.js" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/espiaoinvisivel.com\/wp-admin\/admin-ajax.php","nonce":"df4578dbc9","urls":{"assets":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/espiaoinvisivel.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="js/frontend.min.js" id="elementor-pro-frontend-js" defer=""></script>
+<script src="js/waypoints.min.js" id="elementor-waypoints-js" defer=""></script>
+<script src="js/core.min.js" id="jquery-ui-core-js" defer=""></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.22.1","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_onboarding":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true},"urls":{"assets":"https:\/\/espiaoinvisivel.com\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":238,"title":"NewPasso02%20%E2%80%93%20espiaoinvisivel.com","excerpt":"","featuredImage":false}};
+</script>
+<script src="js/frontend.min_1.js" id="elementor-frontend-js" defer=""></script>
+<script src="js/elements-handlers.min.js" id="pro-elements-handlers-js" defer=""></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="js/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=["http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/ESPIAO-OFICIAL.jpg","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/1-768x319-1.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/2-768x323-1.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/3.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/Headline-3.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/img111.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/ETAPDSA-2-TESTE-1536x432-1.png","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/3-PASSO.jpg","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/2-PASSO.jpg","http:\/\/espiaoinvisivel.com\/wp-content\/uploads\/2023\/10\/1-PASSO-atualizado.jpg"];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>	
+
+
+</body></html><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1720018577 -->
